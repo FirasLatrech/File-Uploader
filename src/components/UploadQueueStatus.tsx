@@ -1,4 +1,3 @@
-import React from "react";
 import {
     Card,
     Text,
@@ -47,28 +46,28 @@ export const UploadQueueStatus: React.FC<UploadQueueStatusProps> = ({
                 <ProgressBar progress={progress} size="small" />
 
                 <LegacyStack wrap spacing="tight">
-                    <Badge tone="info">Total: {total}</Badge>
+                    <Badge tone="info">{`Total: ${total}`}</Badge>
                     {pending > 0 && (
-                        <Badge tone="info">Pending: {pending}</Badge>
+                        <Badge tone="info">{`Pending: ${pending}`}</Badge>
                     )}
                     {uploading > 0 && (
-                        <Badge tone="attention">Uploading: {uploading}</Badge>
+                        <Badge tone="attention">{`Uploading: ${uploading}`}</Badge>
                     )}
                     {completed > 0 && (
-                        <Badge tone="success">Completed: {completed}</Badge>
+                        <Badge tone="success">{`Completed: ${completed}`}</Badge>
                     )}
                     {failed > 0 && (
-                        <Badge tone="critical">Failed: {failed}</Badge>
+                        <Badge tone="critical">{`Failed: ${failed}`}</Badge>
                     )}
                     {retrying > 0 && (
-                        <Badge tone="warning">Retrying: {retrying}</Badge>
+                        <Badge tone="warning">{`Retrying: ${retrying}`}</Badge>
                     )}
                 </LegacyStack>
 
                 <LegacyStack spacing="tight">
                     {failed > 0 && (
                         <Button onClick={onRetryFailed} size="slim">
-                            Retry Failed ({failed})
+                            {`Retry Failed (${failed})`}
                         </Button>
                     )}
                     {completed > 0 && (
@@ -77,7 +76,7 @@ export const UploadQueueStatus: React.FC<UploadQueueStatusProps> = ({
                             size="slim"
                             variant="secondary"
                         >
-                            Clear Completed ({completed})
+                            {`Clear Completed (${completed})`}
                         </Button>
                     )}
                 </LegacyStack>

@@ -59,7 +59,7 @@ export const FileDropzone: React.FC<FileDropzoneProps> = ({
                             Choose files
                         </Button>
                     </LegacyStack>
-                    <Text variant="bodySm" tone="subdued" as="p"    >
+                    <Text variant="bodySm" tone="subdued" as="p">
                         Upload multiple files at once. Files will be processed 3
                         at a time.
                     </Text>

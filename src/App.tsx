@@ -1,11 +1,10 @@
-import React from "react";
 import { AppProvider, Page, Layout, LegacyStack, Text } from "@shopify/polaris";
 import "@shopify/polaris/build/esm/styles.css";
 
-import { useFileUpload } from "@/hooks/useFileUpload";
-import { FileDropzone } from "@/components/FileDropzone";
-import { UploadQueueStatus } from "@/components/UploadQueueStatus";
-import { FileList } from "@/components/FileList";
+import { useFileUpload } from "./hooks/useFileUpload";
+import { FileDropzone } from "./components/FileDropzone";
+import { UploadQueueStatus } from "./components/UploadQueueStatus";
+import { FileList } from "./components/FileList";
 
 function App() {
     const {

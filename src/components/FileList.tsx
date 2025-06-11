@@ -1,4 +1,3 @@
-import React from "react";
 import {
     Card,
     ResourceList,
@@ -11,7 +10,7 @@ import {
     Thumbnail,
 } from "@shopify/polaris";
 import { DeleteMajor, ViewMajor } from "@shopify/polaris-icons";
-import { UploadFile, UploadStatus } from "@/types/upload";
+import { UploadFile, UploadStatus } from "../types/upload";
 
 interface FileListProps {
     files: UploadFile[];
@@ -64,12 +63,12 @@ export const FileList: React.FC<FileListProps> = ({
             <ResourceItem
                 id={id}
                 key={id}
-                onClick={() => window.open(url, "_blank")}
+                onClick={() => url && window.open(url, "_blank")}
             >
                 <LegacyStack alignment="center" spacing="loose">
                     {getFileIcon(originalFile)}
 
-                    <LegacyStack vertical spacing="extraTight" fill>
+                    <div style={{ flex: 1 }}>
                         <LegacyStack
                             alignment="center"
                             distribution="equalSpacing"
@@ -127,7 +126,7 @@ export const FileList: React.FC<FileListProps> = ({
                                 Remove
                             </Button>
                         </LegacyStack>
-                    </LegacyStack>
+                    </div>
                 </LegacyStack>
             </ResourceItem>
         );
